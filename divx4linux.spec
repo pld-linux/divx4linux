@@ -9,6 +9,7 @@ Epoch:		1
 License:	restricted, non-distributable (DIVXNETWORKS EULA)
 Group:		Libraries
 Source0:	http://download.divx.com/divx/divx4linux501-%{stamp}.tgz
+# Source0-md5:	936df07d3ff88b486778a2150f910fc0
 URL:		http://www.divx.com/
 NoSource:	0
 ExclusiveArch:	%{ix86}

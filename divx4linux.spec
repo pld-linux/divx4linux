@@ -6,10 +6,11 @@ Name:		divx4linux
 Version:	5.01.%{stamp}
 Release:	1
 Epoch:		1
-License:	DIVXNETWORKS Inc. End-user license
+License:	restricted, non-distributable (DIVXNETWORKS EULA)
 Group:		Libraries
 Source0:	http://download.divx.com/divx/divx4linux501-%{stamp}.tgz
 URL:		http://www.divx.com/
+NoSource:	0
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libdivxdecore

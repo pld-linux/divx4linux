@@ -1,15 +1,15 @@
 
-%define stamp 20020418
+%define stamp 20030428
 Summary:	DivX MPEG-4 implementation
 Summary(pl):	Implementacja DivX MPEG-4
 Name:		divx4linux
-Version:	5.01.%{stamp}
+Version:	5.05.%{stamp}
 Release:	1
 Epoch:		1
 License:	restricted, non-distributable (DIVXNETWORKS EULA)
 Group:		Libraries
-Source0:	http://download.divx.com/divx/divx4linux501-%{stamp}.tgz
-# Source0-md5:	936df07d3ff88b486778a2150f910fc0
+Source0:	http://download.divx.com/divx/divx4linux-std-%{stamp}.tar.gz
+# Source0-md5:	6332d98ad949a40c588681acbf4078f4
 URL:		http://www.divx.com/
 NoSource:	0
 ExclusiveArch:	%{ix86}
@@ -55,7 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README* license*
 %attr(755,root,root) %{_libdir}/*.so
 
 %files devel

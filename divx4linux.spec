@@ -15,9 +15,9 @@ Group(uk):	‚¶¬Ã¶œ‘≈À…
 #Source0:	http://download.projectmayo.com/dnload/divx4linux/%{name}-%{version}.tgz
 Source0:	http://avifile.sourceforge.net/divx4linux-20011010.tgz
 URL:		http://www.projectmayo.com/linux/
-Obsoletes:	libdivxdecore
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	libdivxdecore
 
 %description
 DivX MPEG-4 decoder and encoder.
@@ -50,11 +50,10 @@ Pliki nag≥Ûwkowe libdivxdecore/libdivxencore.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}/divx}
 
-install -d $RPM_BUILD_ROOT/%{_libdir}
-install -d $RPM_BUILD_ROOT/%{_includedir}/divx
-install *.so $RPM_BUILD_ROOT/%{_libdir}
-install *.h $RPM_BUILD_ROOT/%{_includedir}/divx
+install *.so $RPM_BUILD_ROOT%{_libdir}
+install *.h $RPM_BUILD_ROOT%{_includedir}/divx
 
 gzip -9nf RELNOTES.linux "Codec Core Interface.txt" license.txt
 

@@ -27,7 +27,7 @@ Enkoder i dekoder DivX MPEG-4.
 Summary:	DivX header files
 Summary(pl):	Pliki nag³ówkowe DivX
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 Obsoletes:	libdivxdecore-devel
 Obsoletes:	divx4linux5-devel
 

@@ -1,7 +1,7 @@
 Summary:	MPEG-4 implementation
 Summary(pl):	Implementacja MPEG-4
 Name:		divx4linux
-Version:	20011010
+Version:	20011025
 Release:	1
 License:	DIVXNETWORKS Inc. End-user license
 Group:		Libraries
@@ -13,7 +13,7 @@ Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
 Group(uk):	Б╕бл╕отеки
 #Source0:	http://download.projectmayo.com/dnload/divx4linux/%{name}-%{version}.tgz
-Source0:	http://avifile.sourceforge.net/divx4linux-20011010.tgz
+Source0:	http://avifile.sourceforge.net/%{name}-%{version}.tgz
 URL:		http://www.projectmayo.com/linux/
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

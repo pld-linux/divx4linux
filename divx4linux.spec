@@ -1,22 +1,25 @@
-Summary:	MPEG-4 implementation
-Summary(pl):	Implementacja MPEG-4
+
+%define stamp 20020418
+Summary:	DivX MPEG-4 implementation
+Summary(pl):	Implementacja DivX MPEG-4
 Name:		divx4linux
-Version:	20011025
+Version:	5.01.%{stamp}
 Release:	1
+Epoch:		1
 License:	DIVXNETWORKS Inc. End-user license
 Group:		Libraries
-#Source0:	http://download.projectmayo.com/dnload/divx4linux/%{name}-%{version}.tgz
-Source0:	http://avifile.sourceforge.net/%{name}-%{version}.tgz
-URL:		http://www.projectmayo.com/projects/detail.php?projectId=4
+Source0:	http://download.divx.com/divx/divx4linux501-%{stamp}.tgz
+URL:		http://www.divx.com
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libdivxdecore
+Obsoletes:	divx4linux5
 
 %description
-DivX MPEG-4 decoder and encoder.
+DivX MPEG-4 encoder and decoder.
 
 %description -l pl
-Dekoder i koder MPEG-4 DivX.
+Enkoder i dekoder DivX MPEG-4.
 
 %package devel
 Summary:	DivX header files
@@ -24,15 +27,16 @@ Summary(pl):	Pliki nag³ówkowe DivX
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Obsoletes:	libdivxdecore-devel
+Obsoletes:	divx4linux5-devel
 
 %description devel
-Header files for libdivxdecore/libdivxencore.
+Header files for DivX.
 
-%description -l pl devel
-Pliki nag³ówkowe libdivxdecore/libdivxencore.
+%description devel -l pl
+Pliki nag³ówkowe kodeka DivX.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{stamp}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -40,8 +44,6 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}/divx}
 
 install *.so $RPM_BUILD_ROOT%{_libdir}
 install *.h $RPM_BUILD_ROOT%{_includedir}/divx
-
-gzip -9nf RELNOTES.linux "Codec Core Interface.txt" license.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,10 +53,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {RELNOTES.linux,license.txt}.gz
+%doc README* license*
 %attr(755,root,root) %{_libdir}/*.so
 
 %files devel
 %defattr(644,root,root,755)
-%doc Codec*.gz
+%doc *.htm*
 %{_includedir}/divx

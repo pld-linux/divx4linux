@@ -1,5 +1,5 @@
 Summary:	MPEG-4 implementation
-Summary(pl):	Implementacja dekodera MPEG-4
+Summary(pl):	Implementacja MPEG-4
 Name:		divx4linux
 Version:	20010824
 Release:	1
@@ -9,40 +9,50 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	‚…¬Ã…œ‘≈À…
+Group(uk):	‚¶¬Ã¶œ‘≈À…
 Source0:	http://download.projectmayo.com/dnload/divx4linux/%{name}-%{version}.tgz
 URL:		http://www.projectmayo.com/linux/
+Obsoletes:	libdivxdecore
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-DivX MPEG-4 decoder
+DivX MPEG-4 decoder and encoder.
+
+%description -l pl
+Dekoder i koder MPEG-4 DivX.
 
 %package devel
-Summary:	Header files
-Summary(pl):	Pliki nag≥Ûwkowe
+Summary:	DivX header files
+Summary(pl):	Pliki nag≥Ûwkowe DivX
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name} = %{version}
 
 %description devel
-Header files
+Header files for libdivxdecore/libdivxencore.
 
 %description -l pl devel
-Pliki nag≥Ûwkowe
+Pliki nag≥Ûwkowe libdivxdecore/libdivxencore.
 
 %prep
 %setup -q
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/%{_libdir}
 install -d $RPM_BUILD_ROOT/%{_includedir}/divx
-cp *.so $RPM_BUILD_ROOT/%{_libdir}
-cp *.h $RPM_BUILD_ROOT/%{_includedir}/divx
+install *.so $RPM_BUILD_ROOT/%{_libdir}
+install *.h $RPM_BUILD_ROOT/%{_includedir}/divx
 
 gzip -9nf RELNOTES.linux "Codec Core Interface.txt" license.txt
 
@@ -54,9 +64,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc {RELNOTES.linux,license.txt}.gz
 %attr(755,root,root) %{_libdir}/*.so
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/divx/*.h
+%doc Codec*.gz
+%{_includedir}/divx

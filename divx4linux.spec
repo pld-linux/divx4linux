@@ -1,7 +1,7 @@
 Summary:	MPEG-4 implementation
 Summary(pl):	Implementacja MPEG-4
 Name:		divx4linux
-Version:	20020304
+Version:	20011025
 Release:	1
 License:	DIVXNETWORKS Inc. End-user license
 Group:		Libraries
@@ -41,7 +41,7 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}/divx}
 install *.so $RPM_BUILD_ROOT%{_libdir}
 install *.h $RPM_BUILD_ROOT%{_includedir}/divx
 
-gzip -9nf RELNOTES.linux license.txt
+gzip -9nf RELNOTES.linux "Codec Core Interface.txt" license.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,4 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%doc Codec*.gz
 %{_includedir}/divx

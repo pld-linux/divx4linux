@@ -2,7 +2,7 @@ Summary:	MPEG-4 implementation
 Summary(pl):	Implementacja MPEG-4
 Name:		divx4linux
 Version:	20010824
-Release:	1
+Release:	2
 License:	DIVXNETWORKS Inc. End-user license
 Group:		Libraries
 Group(de):	Libraries
@@ -36,6 +36,7 @@ Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
 Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
+Obsoletes:	libdivxdecore-devel
 
 %description devel
 Header files for libdivxdecore/libdivxencore.

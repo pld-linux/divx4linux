@@ -14,7 +14,7 @@ Group(ru):	Библиотеки
 Group(uk):	Б╕бл╕отеки
 #Source0:	http://download.projectmayo.com/dnload/divx4linux/%{name}-%{version}.tgz
 Source0:	http://avifile.sourceforge.net/%{name}-%{version}.tgz
-URL:		http://www.projectmayo.com/linux/
+URL:		http://www.projectmayo.com/projects/detail.php?projectId=4
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libdivxdecore

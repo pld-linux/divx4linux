@@ -9,7 +9,7 @@ Epoch:		1
 License:	DIVXNETWORKS Inc. End-user license
 Group:		Libraries
 Source0:	http://download.divx.com/divx/divx4linux501-%{stamp}.tgz
-URL:		http://www.divx.com
+URL:		http://www.divx.com/
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libdivxdecore

@@ -5,13 +5,6 @@ Version:	20011025
 Release:	1
 License:	DIVXNETWORKS Inc. End-user license
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 #Source0:	http://download.projectmayo.com/dnload/divx4linux/%{name}-%{version}.tgz
 Source0:	http://avifile.sourceforge.net/%{name}-%{version}.tgz
 URL:		http://www.projectmayo.com/projects/detail.php?projectId=4
@@ -29,13 +22,6 @@ Dekoder i koder MPEG-4 DivX.
 Summary:	DivX header files
 Summary(pl):	Pliki nagЁСwkowe DivX
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Obsoletes:	libdivxdecore-devel
 

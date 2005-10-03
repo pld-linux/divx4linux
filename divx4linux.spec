@@ -9,13 +9,13 @@ Epoch:		1
 License:	restricted, non-distributable (DIVXNETWORKS EULA)
 Group:		Libraries
 Source0:	http://download.divx.com/divx/divx4linux-std-%{stamp}.tar.gz
-# Source0-md5:	6332d98ad949a40c588681acbf4078f4
+# NoSource0-md5:	6332d98ad949a40c588681acbf4078f4
 URL:		http://www.divx.com/
 NoSource:	0
-ExclusiveArch:	%{ix86}
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libdivxdecore
 Obsoletes:	divx4linux5
+ExclusiveArch:	%{ix86}
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 DivX MPEG-4 encoder and decoder.

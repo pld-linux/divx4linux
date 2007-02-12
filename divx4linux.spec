@@ -1,7 +1,7 @@
 
 %define stamp 20030428
 Summary:	DivX MPEG-4 implementation
-Summary(pl):	Implementacja DivX MPEG-4
+Summary(pl.UTF-8):   Implementacja DivX MPEG-4
 Name:		divx4linux
 Version:	5.05.%{stamp}
 Release:	1
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DivX MPEG-4 encoder and decoder.
 
-%description -l pl
+%description -l pl.UTF-8
 Enkoder i dekoder DivX MPEG-4.
 
 %package devel
 Summary:	DivX header files
-Summary(pl):	Pliki nag≥Ûwkowe DivX
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe DivX
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}
 Obsoletes:	libdivxdecore-devel
@@ -34,8 +34,8 @@ Obsoletes:	divx4linux5-devel
 %description devel
 Header files for DivX.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe kodeka DivX.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe kodeka DivX.
 
 %prep
 %setup -q -n %{name}-%{stamp}
